@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古诗词知识图谱</title>
+    <link rel="icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./style/index.css">
+    <!-- Add default CSS reference -->
+    <link rel="stylesheet" href="./node_modules/popoto/dist/popoto.min.css">
+</head>
+<body class="ppt-body" onload="draw()" style="background-color: #353C4B;">
+    <h1>📖古诗词知识图谱</h1>
+    
+    <nav id="navbar">
+        <a href="#popoto">图谱查询</a>
+        <a href="#neovis">语句查询</a>
+        <a href="#authors">主要诗人</a>
+        <a href="#dynasties">朝代分布</a>
+        <a href="#singleword">单字意象</a>
+        <a href="#doubleword">双字意象</a>
+        <a href="#seasons">诗中四季</a>
+        <a href="#tags">常见类型</a>
+        <a href="#about">关于</a>
+    </nav>
+    <hr>
+    <h2 id="popoto">图谱查询</h2>
+    <section class="ppt-section-main">
+        <div class="ppt-section-header">
+            <span class="ppt-header-span">Neo4j 古诗词图谱</span>
+        </div>
+
+        <div class="ppt-container-graph">
+            <nav id="popoto-taxonomy" class="ppt-taxo-nav">
+                <!-- Label/taxonomy filter will be generated here -->
+            </nav>
+            <div id="popoto-graph" class="ppt-div-graph">
+                <!-- Graph will be generated here-->
+            </div>
+        </div>
+    
+        <div id="popoto-query" class="ppt-container-query">
+            <!-- Query viewer will be generated here -->
+        </div>
+    
+        <div id="popoto-cypher" class="ppt-container-cypher">
+            <!-- Cypher query viewer will be generated here -->
+        </div>
+    
+        <div class="ppt-section-header">
+            <!-- The total results count is updated with a listener defined below -->
+            RESULTS <span id="result-total-count" class="ppt-count"></span>
+        </div>
+    
+        <div id="popoto-results" class="ppt-container-results">
+            <!-- Results will be generated here -->
+        </div>
+    
+    </section>
+    <hr>
+    <h2 id="neovis">语句查询</h2>
+    <div id="visjs" style="margin: 5px;">
+        <div id="viz"></div><br>
+        <span style="margin: 7px;">Cypher:</span>
+        
+        <textarea rows="4" cols="50" id="cypher" style="border-radius: 5px;"></textarea>
+        <input type="submit" value="Submit" id="reload">
+        <input type="submit" value="Stabilize" id="stabilize">
+    </div><br>
+    <hr>
+    <h2 id="authors">主要诗人</h2>
+    <div id="authorcloud" style="height: 500px; width: 100%;"></div>
+    <hr>
+    <h2 id="dynasties">朝代分布</h2>
+    <div id="dynastiesbar" style="height: 500px; width: 100%;"></div>
+    <hr>
+    <h2 id="singleword">单字意象</h2>
+    <div id="singlewordcloud" style="height: 500px; width: 100%;"></div><br>
+    <hr>
+    <h2 id="doubleword">双字意象</h2>
+    <div id="doublewordcloud" style="height: 500px;width: 100%;"></div><br>
+    <hr>
+    <h2 id="seasons">诗中四季</h2>
+    <div id="seasonsbar" style="height: 500px;"></div>
+    <hr>
+    <h2 id="tags">常见类型</h2>
+    <div id="tagcloud" style="height: 500px;"></div>
+    <hr>
+    <div id="about" style="text-align: center;color: lightcyan;">关于本项目:毕设-知识图谱构建技术的研究与应用-前端展示界面</div>
+    <footer>Made with ❤️ in SCUT.</footer>
+
+
+    <!-- Required scripts -->
+    <script src="./node_modules/d3/dist/d3.min.js" charset="utf-8"></script>
+    <script src="./node_modules/neo4j-driver-lite/lib/browser/neo4j-lite-web.min.js" charset="utf-8"></script>
+    <script src="./node_modules/popoto/dist/popoto.min.js" charset="utf-8"></script>
+    <script src="./node_modules/neovis.js/dist/neovis.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="./src/d3_vis.js" charset="UTF-8"></script>
+    <script src="./node_modules/echarts/dist/echarts.min.js"></script>
+    <script src="./node_modules/echarts-wordcloud/dist/echarts-wordcloud.min.js"></script>
+    <script src="./src/singlewordcloud.js"></script>
+    <script src="./src/doublewordcloud.js"></script>
+    <script src="./src/seasonsbar.js"></script>
+    <script src="./src/dynastybar.js"></script>
+    <script src="./src/authorcloud.js"></script>
+    <script src="./src/tagcloud.js"></script>
+    
+</body>
+</html>

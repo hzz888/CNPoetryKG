@@ -1,0 +1,65 @@
+html,body {
+    font: 13pt arial;
+}
+
+#viz {
+    width: 700px;
+    height: 500px;
+    border: 1px solid lightgray;
+    font: 22pt arial;
+    border-radius: 5px;
+}
+
+#visjs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1,h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+    color: #6E981A;
+    margin: 30px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #6E981A;
+    padding: 20px;
+}
+
+footer {
+    text-align:center;
+    color: lightcyan;
+    position: relative;
+    bottom: 5px;
+    width: 99%;
+    margin: 10px;
+}
+
+#navbar{
+    text-align: center;
+    margin: 30px;
+}
+
+nav>a{
+    color:grey;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    margin: 10px;
+}
+
+nav>a:hover{
+    color:white;
+    border-bottom: 1px solid white;
+}
+
+.ppt-section-main{
+    margin: 50px;
+}
+
+hr{
+    border: 1px solid gray;
+}

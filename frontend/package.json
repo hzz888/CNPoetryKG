@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "echarts": "^5.3.2",
+    "echarts-wordcloud": "^2.0.0",
+    "neo4j-driver-lite": "^4.4.5",
+    "neovis.js": "^1.6.0",
+    "popoto": "^3.0.2"
+  }
+}
