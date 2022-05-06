@@ -250,8 +250,8 @@ def main_():
     data = data.rename(columns={'review': 'text'})
     data = data.sample(frac=0.05)
     data_train, data_test = train_test_split(data, random_state=0, test_size=0.4)
+    
     data = dict()
-
     data['data_train'] = data_train
     data['data_test'] = data_test
     data['bs'] = 32
