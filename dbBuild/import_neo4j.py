@@ -1,7 +1,7 @@
 import xlrd
 from py2neo import *
 
-graph = Graph("bolt://localhost:7687", auth=("neo4j", "6886089"))
+graph = Graph("bolt://localhost:7687", auth=("neo4j", "123456"))
 
 data = xlrd.open_workbook('../data/final.xls')
 table = data.sheets()[0]

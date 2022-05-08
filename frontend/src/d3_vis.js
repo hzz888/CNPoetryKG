@@ -1,7 +1,7 @@
 // Popoto.js configuration.
 var driver = neo4j.driver(
     "bolt://localhost:7687",
-    neo4j.auth.basic("neo4j", "6886089"),
+    neo4j.auth.basic("neo4j", "123456"),
 );
 
 popoto.runner.DRIVER = driver
@@ -87,7 +87,7 @@ function draw() {
         container_id: "viz",
         server_url: "bolt://localhost:7687",
         server_user: "neo4j",
-        server_password: "6886089",
+        server_password: "123456",
         labels: {
             //"Character": "name",
             "标题": {
