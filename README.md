@@ -2,7 +2,7 @@
  Chinese Poetry Knowledge Graph  
  中华古诗词知识图谱  
    
- ```bert_bilstm``` Poetry emotion analysis based on BERT and BiLSTM using pytorch. (Performance not very good due to badly pre-labeled data.)   
+ ```bert_bilstm``` Poetry emotion analysis based on BERT and BiLSTM using pytorch. (Performance not very good due to inappropriate pre-labeled data.)   
    
  ```data``` Data storage folder.  
    
@@ -12,4 +12,5 @@
    
  ```processing``` Process and analyze meta data in Chinese poetry.  
    
- ```spider``` Spider to crawl data from internet.
+ ```spider``` Spider to crawl data from internet.  
+ 
