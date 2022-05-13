@@ -8,3 +8,4 @@ jiayan~=0.0.21
 numpy~=1.22.3
 pandas~=1.4.2
 scikit-learn~=1.0.2
+xlutils~=2.0.0

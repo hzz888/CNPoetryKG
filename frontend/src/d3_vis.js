@@ -62,7 +62,15 @@ popoto.provider.node.Provider = {
     "悲伤因子": {
         "returnAttributes": ["name"],
         "constraintAttribute": "name"
-    }
+    },
+    "文学体裁": {
+        "returnAttributes": ["name"],
+        "constraintAttribute": "name"
+    },
+    "作品出处": {
+        "returnAttributes": ["name"],
+        "constraintAttribute": "name"
+    },
 };
 
 driver.verifyConnectivity().then(function () {
@@ -171,6 +179,15 @@ function draw() {
                 // "community": "community"
                 //"sizeCypher": "MATCH (n) WHERE id(n) = {id} MATCH (n)-[r]-() RETURN sum(r.weight) AS c"
             },
+            "文学体裁":{
+                "caption": "name",
+                "size": 20,
+            },
+            "作品出处":{
+                "caption": "name",
+                "size": 20,
+            },
+
         },
         relationships: {
             "诗词作者": {
@@ -225,9 +242,18 @@ function draw() {
                 "thickness": "weight",
                 "caption": true
             },
+            "文学体裁":{
+                "thickness": "weight",
+                "caption": true
+            },
+            "作品出处":{
+                "thickness": "weight",
+                "caption": true
+            }
+         
         },
 
-        initial_cypher: "match(n {name:'李白'})-[r]-(p) return n,r,p limit 50"
+        initial_cypher: "match(n {name:\'李白\'})-[r]-(p) return n,r,p limit 50"
     };
 
     viz = new NeoVis.default(config);
