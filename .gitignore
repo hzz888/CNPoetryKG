@@ -143,7 +143,7 @@ models/
 __pycache__/
 .idea/
 .vscode/
-bert_bilstm/3_0.6505.pt
-bert_bilstm/pytorch_model.bin
+emotion_analysis/3_0.6505.pt
+emotion_analysis/pytorch_model.bin
 frontend/node_modules/
 venv/
