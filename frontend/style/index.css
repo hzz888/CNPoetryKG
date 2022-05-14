@@ -3,8 +3,8 @@ html,body {
 }
 
 #viz {
-    width: 700px;
-    height: 500px;
+    width: 1200px;
+    height: 700px;
     border: 1px solid lightgray;
     font: 22pt arial;
     border-radius: 5px;
