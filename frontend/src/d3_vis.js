@@ -71,6 +71,10 @@ popoto.provider.node.Provider = {
         "returnAttributes": ["name"],
         "constraintAttribute": "name"
     },
+    "地点": {
+        "returnAttributes": ["name"],
+        "constraintAttribute": "name"
+    },
 };
 
 driver.verifyConnectivity().then(function () {
@@ -115,19 +119,19 @@ function draw() {
             },
             "作者简介": {
                 "caption": "name",
-                "size": 40,
+                "size": 25,
                 // "community": "community"
                 //"sizeCypher": "MATCH (n) WHERE id(n) = {id} MATCH (n)-[r]-() RETURN sum(r.weight) AS c"
             },
             "分类": {
                 "caption": "name",
-                "size": 30,
+                "size": 25,
                 // "community": "community"
                 //"sizeCypher": "MATCH (n) WHERE id(n) = {id} MATCH (n)-[r]-() RETURN sum(r.weight) AS c"
             },
             "创作背景": {
                 "caption": "name",
-                "size": 30,
+                "size": 25,
                 // "community": "community"
                 //"sizeCypher": "MATCH (n) WHERE id(n) = {id} MATCH (n)-[r]-() RETURN sum(r.weight) AS c"
             },
@@ -139,19 +143,19 @@ function draw() {
             },
             "译文": {
                 "caption": "name",
-                "size": 30,
+                "size": 25,
                 // "community": "community"
                 //"sizeCypher": "MATCH (n) WHERE id(n) = {id} MATCH (n)-[r]-() RETURN sum(r.weight) AS c"
             },
             "诗词内容": {
                 "caption": "name",
-                "size": 30,
+                "size": 25,
                 // "community": "community"
                 //"sizeCypher": "MATCH (n) WHERE id(n) = {id} MATCH (n)-[r]-() RETURN sum(r.weight) AS c"
             },
             "赏析": {
                 "caption": "name",
-                "size": 30,
+                "size": 25,
                 // "community": "community"
                 //"sizeCypher": "MATCH (n) WHERE id(n) = {id} MATCH (n)-[r]-() RETURN sum(r.weight) AS c"
             },
@@ -181,11 +185,15 @@ function draw() {
             },
             "文学体裁":{
                 "caption": "name",
-                "size": 20,
+                "size": 25,
             },
             "作品出处":{
                 "caption": "name",
-                "size": 20,
+                "size": 25,
+            },
+            "地点":{
+                "caption": "name",
+                "size": 25,
             },
 
         },
@@ -249,7 +257,15 @@ function draw() {
             "作品出处":{
                 "thickness": "weight",
                 "caption": true
-            }
+            },
+            "诗人相关地点":{
+                "thickness": "weight",
+                "caption": true
+            },
+            "本诗相关地点":{
+                "thickness": "weight",
+                "caption": true
+            },
          
         },
 
