@@ -12,7 +12,7 @@ pattern = re.compile(r'[^\u4e00-\u9fa5]')
 for i in range(1, sheet.nrows):
     row = sheet.row_values(i)
 
-    poemName = row[0]
+    poemName = row[0].replace(" ", "").replace("\r", "").replace("\t", "").replace("\n", "")
     poemForm = re.sub(pattern, '', row[13])
     poemOrigin = re.sub(pattern, '', row[14])
 
