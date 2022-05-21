@@ -232,7 +232,7 @@ def run_(rank, world_size, data):
                 val_acc = (y_pred_val == y_true_val).sum() / y_true_val.shape[0]
                 # log val
                 print(
-                    f'Val Time(s): {time.time() - time_end:4.2f} | ' +
+                    f'Val Time(s): {time.time() - time_end:4.2f} | ' +  # {[argument_index_or_keyword]:[width][.precision][type]}
                     f'Val ACC: {val_acc:.4f}'
                 )
                 torch.save(ddp_model.module.state_dict(), f'./{epoch}_{val_acc:.4f}.pt')
