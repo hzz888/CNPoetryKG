@@ -18,9 +18,9 @@ var optionFour = {
 
             color: function () {
                 return 'rgb(' + [
-                    Math.round(Math.random() * 300),
-                    Math.round(Math.random() * 300),
-                    Math.round(Math.random() * 300)
+                    Math.round(Math.random() * 200),
+                    Math.round(Math.random() * 200),
+                    Math.round(Math.random() * 100)
                 ].join(',') + ')';
             },
 

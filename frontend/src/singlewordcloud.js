@@ -15,13 +15,13 @@ var option = {
         shape: 'circle',
         textStyle: {
             
-                color: function () {
-                    return 'rgb(' + [
-                        Math.round(Math.random() * 300),
-                        Math.round(Math.random() * 300),
-                        Math.round(Math.random() * 300)
-                    ].join(',') + ')';
-                },
+            color: function () {
+                return 'rgb(' + [
+                    Math.round(Math.random() * 200),
+                    Math.round(Math.random() * 200),
+                    Math.round(Math.random() * 100)
+                ].join(',') + ')';
+            },
 
             
             //悬停上去的字体的阴影设置

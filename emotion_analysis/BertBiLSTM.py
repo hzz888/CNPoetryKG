@@ -237,8 +237,8 @@ def run_(rank, world_size, data):
                 )
                 torch.save(ddp_model.module.state_dict(), f'./{epoch}_{val_acc:.4f}.pt')
         print('barrier')
-        # wait other rank
-        # torch.distributed.barrier()
+        # wait other ranks
+        
 
     cleanup()
 
